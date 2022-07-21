@@ -2,7 +2,7 @@ import './App.css';
 
 import React, { useEffect, useState } from 'react';
 
-const API_ENDPOINT = 'http://localhost:3000/users';
+const API_ENDPOINT = 'https://exercise-25-2-debora-back.herokuapp.com/users';
 
 function App() {
   const [data, setData] = useState([]);
