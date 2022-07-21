@@ -13,4 +13,4 @@ jobs:
       - name: Istala dependências
         run: npm install
       - name: executa o lint
-        run: npx eslint .
+        run: npm run lint
