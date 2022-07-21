@@ -2,7 +2,7 @@ import './App.css';
 
 import React, { useEffect, useState } from 'react';
 
-const API_ENDPOINT = 'https://exercise-25-2-debora-back.herokuapp.com/users';
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,15 +20,15 @@ function App() {
     <table>
       <tr>
         {Object.keys(data[0]).map(
-          (key) => (<th key={ Math.random() }>{key}</th>),
+          (key) => (<th key={Math.random()}>{key}</th>),
         )}
       </tr>
       <tbody>
         {data.map((rowInfo) => (
-          <tr key={ Math.random() }>
+          <tr key={Math.random()}>
             {
               Object.values(rowInfo).map(
-                (cellInfo) => (<td key={ Math.random() }>{cellInfo}</td>),
+                (cellInfo) => (<td key={Math.random()}>{cellInfo}</td>),
               )
             }
           </tr>
